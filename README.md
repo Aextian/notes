@@ -1,3 +1,5 @@
-# Notes
+# SSH
+[Navigate to configure ssh ](ssh/README.md)
 
-Technical notes for different kinds of software development.
+# NGINX
+[Navigate to configure ssh ](scripts/ubuntu/nginx/README.md)

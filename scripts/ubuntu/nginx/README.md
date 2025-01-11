@@ -29,17 +29,34 @@ sudo systemctl restart nginx
 
 ## Add domain and Let's Encrypt for SSL certificate
 
-1. Update `server_name localhost` to `server_name <your_domain>` in `/etc/nginx/sites-available/<default or your_domain>`
+1. Update machine
+
+```bash
+sudo apt update
+```
+
+2. Install certbot
+
+```bash
+sudo apt install certbot python3-certbot-nginx
+```
+
+1. Run auto ssl auto renew
+
+```bash
+sudo certbot renew --dry-run
+```
+
+2. Update `server_name localhost` to `server_name <your_domain>` in `/etc/nginx/sites-available/<default or your_domain>`
 
 ```bash
 sudo nano /etc/nginx/sites-available/<default or your_domain>
 ```
 
-2. Run the certbot command to get the SSL certificate
+3. Run the certbot command to get the SSL certificate
 
 ```bash
 sudo certbot --nginx -d <your_domain>
 ```
 
-3. Complete the setup and you're done.
-
+4. Complete the setup and you're done.
