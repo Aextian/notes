@@ -59,3 +59,15 @@ chmod 600 ~/.ssh/authorized_keys
 ```
 
 5. Then, that's it! You're done.
+
+## Restart the SSH service:
+6. To restart the SSH service (which is usually managed by systemd), use the following command:
+```bash
+sudo systemctl restart sshd or 
+sudo service ssh restart
+```
+### Verify the SSH Service Restart:
+To confirm that the SSH service restarted successfully, you can check its status:
+```bash
+sudo systemctl status sshd
+```
