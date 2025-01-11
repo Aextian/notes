@@ -71,3 +71,20 @@ To confirm that the SSH service restarted successfully, you can check its status
 ```bash
 sudo systemctl status sshd
 ```
+
+### Use Explicit Key for Connection
+If you have a problem with ssh  Try explicitly specifying the key when connecting:
+```bash
+ssh -i ~/.ssh/id_rsa user@hostname
+ssh -i C:/Users/<user_name>/.ssh/<server> user@hostname
+```
+
+### Handle multiple ssh in your local machine
+make config inside .ssh and add this line
+```bash
+Host myserver
+    HostName @hostname
+    User laya
+    IdentityFile C:/Users/xtian/.ssh/laya_server
+```
+
