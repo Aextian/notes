@@ -1,3 +1,4 @@
+
 # SSH
 
 ## How to add new SSH key
@@ -5,16 +6,21 @@
 1. Generate a new SSH key pair.
 
 ```bash
-ssh-keygen -t ed25519 -C "<your@email.com>"
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
-by default, the key pair will be saved in `~/.ssh/id_ed25519` and `~/.ssh/id_ed25519.pub`.
+by default, the key pair will be saved in `~/.ssh/id_4096` and `~/.ssh/id_4096.pub`.
 
 or you can specify the file name and location of the key pair.
 
 ```bash
-ssh-keygen -t ed25519 -C "<your@email.com>" -f ~/.ssh/<your_preferred_ssh_name>
+ssh-keygen -t rsa 4096 -C "<your@email.com>" -f ~/.ssh/<your_preferred_ssh_name> or
+ssh-keygen -t rsa -b 4096 -C "your@email.com" -f C:\Users\Username\.ssh\ssh_name
 ```
+
+
+
 
 this will save the key pair in `~/.ssh/<your_preferred_ssh_name>` and `~/.ssh/<your_preferred_ssh_name>.pub`.
 
@@ -53,4 +59,3 @@ chmod 600 ~/.ssh/authorized_keys
 ```
 
 5. Then, that's it! You're done.
-
