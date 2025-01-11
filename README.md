@@ -2,4 +2,4 @@
 [Navigate to configure ssh ](ssh/README.md)
 
 # NGINX
-[Navigate to configure ssh ](scripts/ubuntu/nginx/README.md)
+[Navigate to configure nginx ](scripts/ubuntu/nginx/README.md)
